@@ -62,7 +62,7 @@ async def megadl(bot, message):
     userpath = str(message.from_user.id)
     alreadylol = basedir + "/" + userpath
     if os.path.isdir(alreadylol):
-      await message.reply_text(f"**Can you please stop spamming! \n Your another file is already Downloading, wait untill it gets finished!**", reply_to_message_id=message.message_id)
+      await message.reply_text(f"Can you please stop spamming! \nYour another file is already Downloading, wait untill it gets finished!", reply_to_message_id=message.message_id)
       return
     else:
       os.makedirs(alreadylol)
@@ -128,13 +128,13 @@ async def megadl(bot, message):
             await trace_msg.edit(f"#MegaDL: Upload Done! \n\n{user_info}")
         # Checking if it's a audio
         elif "audio" in filemimespotted:
-            await download_msg.edit("**Trying To Upload ...**")
+            await download_msg.edit("**Uploading ...**")
             safone = await message.reply_audio(magapylol, progress=progress_for_pyrogram, progress_args=("**Uploading ...** \n", download_msg, start_time), reply_to_message_id=message.message_id)
             await download_msg.delete()
             await trace_msg.edit(f"#MegaDL: Upload Done! \n\n{user_info}")
         # If it's not a image/video or audio it'll reply it as doc
         else:
-            await download_msg.edit("**Trying To Upload ...**")
+            await download_msg.edit("**Uploading ...**")
             safone = await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Uploading ...** \n", download_msg, start_time), reply_to_message_id=message.message_id)
             await download_msg.delete()
             await trace_msg.edit(f"#MegaDL: Upload Done! \n\n{user_info}")
