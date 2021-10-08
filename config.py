@@ -33,15 +33,13 @@ class TEXT:
 """
 
   HELP_USER = """
-This is **{bot_name}**
+I am Mega Downloader and captions adder bot
 
-This Bot Can Download Files & Videos From Mega Links & Upload To Telegram. Just Send Any Mega.nz Link & See The Magic. You Can Also Add or Change Caption: Just Select An Uploaded File/ Video or Forward Me Any Telegram File & Then Write The Text You Want To Be Caption On The File As A Reply To That File & The Text You Wrote Will Be Attached As Caption 😁! 
-
-**Made With ❤️ By @AsmSafone! 👑**
+I can download files from mega.nz, Send me any link of mega.nz file and i will download it for you.I can also add caption for your file. You have to only reply your file with caption text, i will automatically add captions! 
 """
 
   START_TEXT = """
-Hi, {user_mention},
+Hi {user_mention},
 
 I'm Mega Downloader bot
 I can download files from mega.nz right in your Telegram.
