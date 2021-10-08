@@ -22,11 +22,11 @@ async def help(bot, message, cb=False):
         return
     me = await bot.get_me()
     button = [[
-        InlineKeyboardButton(f'🏠 HOME', callback_data='back'),
-        InlineKeyboardButton(f'ABOUT 👨', callback_data='about')
+        InlineKeyboardButton(f'My Channel', url='https://t.me/AJPyroVerse'),
+        InlineKeyboardButton(f'My Group', url='https://t.me/AJPyroVerseGroup')
         ],[
-        InlineKeyboardButton(f'📦 SOURCE', url='https://github.com/AsmSafone/MegaDL-Bot'),
-        InlineKeyboardButton(f'CLOSE 🔐', callback_data='close')
+        InlineKeyboardButton(f'HELP', callback_data='help'),
+        InlineKeyboardButton(f'CLOSE', callback_data='close')
         ]]
     reply_markup = InlineKeyboardMarkup(button)
     if cb:
@@ -52,13 +52,13 @@ async def start(bot, message, cb=False):
         return
     me = await bot.get_me()
     owner = await bot.get_users(Config.OWNER_ID)
-    owner_username = owner.username if owner.username else 'AsmSafone'
+    owner_username = owner.username if owner.username else 'AJPyroVerse'
     button = [[
-        InlineKeyboardButton(f'💡 HELP', callback_data='help'),
-        InlineKeyboardButton(f'ABOUT 👨', callback_data="about")
+        InlineKeyboardButton(f'My Channel', url='https://t.me/AJPyroVerse'),
+        InlineKeyboardButton(f'My Group', url="https://t.me/AJPyroVerseGroup")
         ],[
-        InlineKeyboardButton(f'📦 SOURCE', url='https://github.com/AsmSafone/MegaDL-Bot'),
-        InlineKeyboardButton(f'CLOSE 🔐', callback_data="close")
+        InlineKeyboardButton(f'HELP', callback_data='help'),
+        InlineKeyboardButton(f'CLOSE', callback_data="close")
         ]]
     reply_markup = InlineKeyboardMarkup(button)
     if cb:
@@ -84,11 +84,11 @@ async def about(bot, message, cb=False):
         return
     me = await bot.get_me()
     button = [[
-        InlineKeyboardButton(f'🏠 HOME', callback_data='back'),
-        InlineKeyboardButton(f'HELP 💡', callback_data='help')
+        InlineKeyboardButton(f'My Channel', url='https://t.me/AJPyroVerse'),
+        InlineKeyboardButton(f'My Group', url='https://t.me/AJPyroVerseGroup')
         ],[
-        InlineKeyboardButton(f'📦 SOURCE', url='https://github.com/AsmSafone/MegaDL-Bot'),
-        InlineKeyboardButton(f'CLOSE 🔐', callback_data="close")
+        InlineKeyboardButton(f'HELP', callback_data='help'),
+        InlineKeyboardButton(f'CLOSE', callback_data="close")
         ]]
     reply_markup = InlineKeyboardMarkup(button)
     if cb:
@@ -138,21 +138,21 @@ async def refreshmeh_cb(bot, message):
             user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), message.from_user.id)
             if user.status == "kicked":
                 await message.message.edit(
-                    text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/safothebot).",
+                    text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/AJPyroVerseGroup).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
                 return
         except UserNotParticipant:
             await message.message.edit(
-                text="**You Still Didn't Join ☹️, Please Join My Updates Channel To Use Me!**\n\nDue to Overload, Only Channel Subscribers Can Use Me!",
+                text="**plz join my channel in order to use me!**\n\nDue to Overload, Only my Channel Subscribers Can Use Me!",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 Join Updates Channel 🤖", url=invite_link.invite_link)
+                            InlineKeyboardButton("Join Channel", url=invite_link.invite_link)
                         ],
                         [
-                            InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+                            InlineKeyboardButton("Refresh", callback_data="refreshmeh")
                         ]
                     ]
                 ),
@@ -161,7 +161,7 @@ async def refreshmeh_cb(bot, message):
             return
         except Exception:
             await message.message.edit(
-                text="Something Went Wrong. Contact My [Support Group](https://t.me/safothebot).",
+                text="Something Went Wrong. Contact My [Support Group](https://t.me/AJPyroVerseGroup).",
                 parse_mode="markdown",
                 disable_web_page_preview=True
             )
@@ -177,16 +177,16 @@ async def cancel_cb(bot, message):
     userpath = str(message.from_user.id)
     try:
         await message.answer(
-            "Trying To Cancel... 🤒",
+            "Trying To Cancel...",
                 show_alert=True
             )
         await asyncio.sleep(5)
         shutil.rmtree(basedir + "/" + userpath)
         await message.message.delete()
-        await message.message.reply_text("**Process Cancelled By User 😡!**", reply_to_message_id=message.message_id)
+        await message.message.reply_text("**Process Cancelled By User!**", reply_to_message_id=message.message_id)
     except Exception as e:
         await print(e)
         await message.answer(
-            "Can't Cancel Right Now! 😡",
+            "Can't Cancel Right Now!",
                 show_alert=True
             )
