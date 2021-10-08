@@ -30,15 +30,15 @@ async def progress_for_pyrogram(
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
         progress = "`[{0}{1}]` \n".format(
-            ''.join(["●" for i in range(math.floor(percentage / 5))]),
-            ''.join(["○" for i in range(20 - math.floor(percentage / 5))])
+            ''.join(["■" for i in range(math.floor(percentage / 5))]),
+            ''.join(["□" for i in range(20 - math.floor(percentage / 5))])
             )
         
         ok = "`{0}%` \n".format(
             round(percentage, 2)
             )
 
-        tmp = ok + progress + "\n➩ **Done:** `{0}` \n➩ **Total:** `{1}` \n➩ **Speed:** `{2}/s` \n➩ **Time Left:** `{3}`".format(
+        tmp = ok + progress + "\n**Uploaded:** `{0}` \n**File Size:** `{1}` \n**Speed:** `{2}/s` \n**Time Left:** `{3}`".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
@@ -46,7 +46,7 @@ async def progress_for_pyrogram(
         )
         try:
             await message.edit(
-                text="**{}** {} \n\n**@AsmSafone | @SafoTheBot**".format(
+                text="**{}** {} \n\n****".format(
                     ud_type,
                     tmp
                 ),
