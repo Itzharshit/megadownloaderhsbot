@@ -26,7 +26,7 @@ async def help(bot, message, cb=False):
         InlineKeyboardButton(f'ABOUT ME', callback_data='about')
         ],
         InlineKeyboardButton(f'EXIT', callback_data='close')
-        ]]
+        ]
     reply_markup = InlineKeyboardMarkup(button)
     if cb:
         await message.message.edit(
@@ -57,7 +57,7 @@ async def start(bot, message, cb=False):
         InlineKeyboardButton(f'ABOUT ME', callback_data="about")
         ],
         InlineKeyboardButton(f'EXIT', callback_data="close")
-        ]]
+        ]
     reply_markup = InlineKeyboardMarkup(button)
     if cb:
         await message.message.edit(
@@ -86,7 +86,7 @@ async def about(bot, message, cb=False):
         InlineKeyboardButton(f'HELP', callback_data='help')
         ],
         InlineKeyboardButton(f'EXIT', callback_data="close")
-        ]]
+        ]
     reply_markup = InlineKeyboardMarkup(button)
     if cb:
         await message.message.edit(
