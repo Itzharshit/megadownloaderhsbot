@@ -17,19 +17,19 @@ class Config:
 
 class TEXT:
   ABOUT = """
-🤖 **Name:** {bot_name}
+**Name:** {bot_name}
 
-📝 **Language:** [Python](https://www.python.org)
+**Language:** [Python](https://www.python.org)
 
-📚 **Library:** [Pyrogram](https://docs.pyrogram.org)
+**Library:** [Pyrogram](https://docs.pyrogram.org)
 
-📡 **Hosted On:** [Heroku](https://heroku.com)
+**Hosted On:** [Heroku](https://heroku.com)
 
-🧑‍💻 **Developer:** [Safone](https://t.me/ImSafone)
+**Developer:** [Safone](https://t.me/ImSafone)
 
-👥 **Support Group:** [SafoTheBot](https://t.me/safothebot)
+**Support Group:** [SafoTheBot](https://t.me/safothebot)
 
-📢 **Updates Channel:** [Ｓ１ ＢＯＴＳ](https://t.me/AsmSafone)
+**Updates Channel:** [Ｓ１ ＢＯＴＳ](https://t.me/AsmSafone)
 """
 
   HELP_USER = """
@@ -41,10 +41,8 @@ This Bot Can Download Files & Videos From Mega Links & Upload To Telegram. Just 
 """
 
   START_TEXT = """
-👋🏻 **Hi** {user_mention},
+Hi, {user_mention},
 
-I'm **{bot_name}**
-I Can Download Files & Videos From Mega.nz Links & Upload To Telegram. Please Check Help To Learn More 😉!
-
-**Maintained By: {bot_owner}**❤️!
+I'm Mega Downloader bot
+I can download files from mega.nz right in your Telegram.
 """
