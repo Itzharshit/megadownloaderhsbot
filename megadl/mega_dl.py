@@ -73,7 +73,7 @@ async def megadl(bot, message):
       else:
         logs_msg = await message.forward(Config.LOG_CHANNEL)
         trace_msg = await logs_msg.reply_text(f"#MegaDL: Downloading Started! \n\n{user_info}")
-        download_msg = await message.reply_text(f"**Downloading ...** \n\nPlease Wait!", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Cancel Mega DL", callback_data="cancel_mega")]]), reply_to_message_id=message.message_id)
+        download_msg = await message.reply_text(f"**Downloading ...** \n\nPlease Wait!", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Cancel Mega Download", callback_data="cancel_mega")]]), reply_to_message_id=message.message_id)
         loop = get_running_loop()
         await loop.run_in_executor(None, partial(DownloadMegaLink, url, alreadylol, download_msg))
         getfiles = [f for f in os.listdir(alreadylol) if isfile(join(alreadylol, f))]
