@@ -20,7 +20,7 @@ class TEXT:
 """
 
   HELP_USER = """
-I am Mega Downloader and captions adder bot.
+I am Mega Downloader bot created by @pyrogrammers.
 
 I can download files from mega.nz, Send me any link of mega.nz file and i will download it for you.I can also add caption for your file. You have to only reply your file with caption text, i will automatically add captions! 
 """
@@ -29,5 +29,5 @@ I can download files from mega.nz, Send me any link of mega.nz file and i will d
 Hi {user_mention},
 
 I'm Mega Downloader bot.
-I can download files from mega.nz right in your Telegram.
+I can download files from mega.nz in your Telegram.
 """
