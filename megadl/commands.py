@@ -22,8 +22,8 @@ async def help(bot, message, cb=False):
         return
     me = await bot.get_me()
     button = [[
-        InlineKeyboardButton(f'My Channel', url='https://t.me/AJPyroVerse'),
-        InlineKeyboardButton(f'My Group', url='https://t.me/AJPyroVerseGroup')
+        InlineKeyboardButton(f'My Channel', url='https://t.me/pyrogrammers'),
+        InlineKeyboardButton(f'My Group', url='https://t.me/+7ScFy39Vckk5MWQ1')
         ],[
         InlineKeyboardButton(f'HELP', callback_data='help'),
         InlineKeyboardButton(f'CLOSE', callback_data='close')
@@ -54,8 +54,8 @@ async def start(bot, message, cb=False):
     owner = await bot.get_users(Config.OWNER_ID)
     owner_username = owner.username if owner.username else 'AJPyroVerse'
     button = [[
-        InlineKeyboardButton(f'My Channel', url='https://t.me/AJPyroVerse'),
-        InlineKeyboardButton(f'My Group', url="https://t.me/AJPyroVerseGroup")
+        InlineKeyboardButton(f'My Channel', url='https://t.me/pyrogrammers'),
+        InlineKeyboardButton(f'My Group', url="https://t.me/+7ScFy39Vckk5MWQ1")
         ],[
         InlineKeyboardButton(f'HELP', callback_data='help'),
         InlineKeyboardButton(f'CLOSE', callback_data="close")
@@ -84,8 +84,8 @@ async def about(bot, message, cb=False):
         return
     me = await bot.get_me()
     button = [[
-        InlineKeyboardButton(f'My Channel', url='https://t.me/AJPyroVerse'),
-        InlineKeyboardButton(f'My Group', url='https://t.me/AJPyroVerseGroup')
+        InlineKeyboardButton(f'My Channel', url='https://t.me/pyrogrammers'),
+        InlineKeyboardButton(f'My Group', url='https://t.me/+7ScFy39Vckk5MWQ1')
         ],[
         InlineKeyboardButton(f'HELP', callback_data='help'),
         InlineKeyboardButton(f'CLOSE', callback_data="close")
@@ -138,14 +138,14 @@ async def refreshmeh_cb(bot, message):
             user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), message.from_user.id)
             if user.status == "kicked":
                 await message.message.edit(
-                    text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/AJPyroVerseGroup).",
+                    text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/+7ScFy39Vckk5MWQ1).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
                 return
         except UserNotParticipant:
             await message.message.edit(
-                text="**plz join my channel in order to use me!**\n\nDue to Overload, Only my Channel Subscribers Can Use Me!",
+                text="**Plz join my channel in order to use me!**\n\nDue to Overload, Only my Channel Subscribers Can Use Me!",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -161,7 +161,7 @@ async def refreshmeh_cb(bot, message):
             return
         except Exception:
             await message.message.edit(
-                text="Something Went Wrong. Contact My [Support Group](https://t.me/AJPyroVerseGroup).",
+                text="Something Went Wrong. Contact My [Support Group](https://t.me/+7ScFy39Vckk5MWQ1).",
                 parse_mode="markdown",
                 disable_web_page_preview=True
             )
