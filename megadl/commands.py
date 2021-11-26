@@ -23,7 +23,7 @@ async def help(bot, message, cb=False):
     me = await bot.get_me()
     button = [[
         InlineKeyboardButton(f'My Channel', url='https://t.me/pyrogrammers'),
-        InlineKeyboardButton(f'My Group', url='https://t.me/+7ScFy39Vckk5MWQ1')
+        InlineKeyboardButton(f'My Youtube Channel', url='https://youtube.com/channel/UC2anvk7MNeNzJ6B4c0SZepw')
         ],[
         InlineKeyboardButton(f'HELP', callback_data='help'),
         InlineKeyboardButton(f'CLOSE', callback_data='close')
@@ -55,7 +55,7 @@ async def start(bot, message, cb=False):
     owner_username = owner.username if owner.username else 'AJPyroVerse'
     button = [[
         InlineKeyboardButton(f'My Channel', url='https://t.me/pyrogrammers'),
-        InlineKeyboardButton(f'My Group', url="https://t.me/+7ScFy39Vckk5MWQ1")
+        InlineKeyboardButton(f'My Youtube Channel', url="https://youtube.com/channel/UC2anvk7MNeNzJ6B4c0SZepw")
         ],[
         InlineKeyboardButton(f'HELP', callback_data='help'),
         InlineKeyboardButton(f'CLOSE', callback_data="close")
@@ -85,7 +85,7 @@ async def about(bot, message, cb=False):
     me = await bot.get_me()
     button = [[
         InlineKeyboardButton(f'My Channel', url='https://t.me/pyrogrammers'),
-        InlineKeyboardButton(f'My Group', url='https://t.me/+7ScFy39Vckk5MWQ1')
+        InlineKeyboardButton(f'My Youtube Channel', url='https://youtube.com/channel/UC2anvk7MNeNzJ6B4c0SZepw')
         ],[
         InlineKeyboardButton(f'HELP', callback_data='help'),
         InlineKeyboardButton(f'CLOSE', callback_data="close")
